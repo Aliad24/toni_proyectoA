@@ -15,7 +15,6 @@
 /* ******************************** */
 /* VARIABLES */
 
-
 /* ******************************** */
 
 /* HEADER */
@@ -35,70 +34,120 @@ nav.menu-principal {
 }
 /* CARRUSEL */
 .main__carrusel {
-  display: none;
+    display: none;
 }
-
 
 /* MQ */
 /* IPAD */
-@media screen and (min-width: 48rem) and (orientation: portrait) {
-  
+@media screen and (min-width: 768px) and (orientation: portrait) {
     nav.menu-principal {
-      height: revert;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-        
-        border-bottom: 1px solid grey;
-        
-        & .menu-principal__logo-link {
-
-          & .menu-principal__logo{
-            display: none;
-          }
-        }
-
-        & .menu-principal__parrafo{
-          flex-basis: 40%;
-          background: url(../svg/logoFondo.svg) no-repeat center center;
-          background-size: 90% 90%;
-        }
-      }
-    }
-    
-    /* DESKTOP */
-    @media screen and (min-width: 75rem) {
-      /* CENTRADO */
-      header, .main__texto, .footer__contenido{
-        max-width: 1366px;
-        margin: 0 auto;
-      }
-      nav.menu-principal {
         height: revert;
         flex-direction: row;
         justify-content: space-between;
         align-items: start;
-        
+
+        border-bottom: .06rem solid grey;
+
         & .menu-principal__logo-link {
-          display: flex;
-          flex-direction: row-reverse;
-          
-          & .menu-principal__logo{
-            display: revert;
-          }
+            & .menu-principal__logo {
+                display: none;
+            }
         }
-        & .menu-principal__parrafo{
-          flex-basis: 40%;
-          order: 1;
+
+        & .menu-principal__parrafo {
+            flex-basis: 40%;
+            background: url(../svg/logoFondo.svg) no-repeat center center;
+            background-size: 90% 90%;
+        }
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    /* CENTRADO */
+    header,
+    .main__texto,
+    .footer__contenido {
+        max-width: 85.38rem;
+        margin: 0 auto;
+    }
+    nav.menu-principal {
+        height: revert;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+
+        & .menu-principal__logo-link {
+            display: flex;
+            flex-direction: row-reverse;
+
+            & .menu-principal__logo {
+                display: revert;
+            }
+        }
+        & .menu-principal__parrafo {
+            flex-basis: 40%;
+            order: 1;
         }
     }
     /* CARRUSEL */
     .main__carrusel {
-      display: flex;
-      justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
     }
-
+  }
     /* FOOTER */
-
-
-}
+    /* background de footer */
+    footer{
+      background-color: brown;
+      /* Desktop */
+      @media screen and (min-width: 1200px){
+        display: flex;
+        justify-content: center;
+      }
+    }
+    /* Contenido de footer */
+    .footer {
+      display: flex;
+      flex-direction: column;
+      /* DESKTOP */
+      @media screen and (min-width: 1200px){
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      gap: 32px;
+      & .footer__contenido {
+        display: flex;
+        flex-direction: column;
+        /* IPAD */
+        @media screen and (min-width: 768px){
+          flex-direction: row;
+        }
+        /* DESKTOP */
+        @media screen and (min-width: 1200px){
+          justify-content: space-between;
+        }
+        gap: 16px;
+      }
+      & .footer__copy {
+        display: flex;
+        justify-content: center;
+        /* IPAD */
+        @media screen and (min-width: 768px){
+          justify-content: start;
+        }
+      }
+    }
+    .fcontenido {
+    }
+    .fcontenido__img {
+      width: 3.13em;
+    }
+    .fcontenido__menu {
+    }
+    .fcontenido__legal {
+      border-left: .31rem solid white;
+      @media screen and (min-width: 1200px){
+        border-left: 0;
+      }
+    }
