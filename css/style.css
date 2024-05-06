@@ -97,8 +97,13 @@ nav.menu-principal {
       display: flex;
       justify-content: space-between;
     }
-
-    /* FOOTER */
-
-
-}
+    
+  }
+  
+      /* FOOTER */
+      /* GRID de 4 x 1 */
+      .footer__contenido {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+      }
